@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: whitesmoke;
+}
+header {
+  border-top: 5px solid red;
+}
+h2 {
+  padding: 5px;
+  margin: 5px;
+
+  text-align: center;
+}
+
+footer {
+  padding: 40px 0;
+}
+
+/*about.php, my own work*/
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0px;
+}
+.container > div {
+  background: #eee;
+  padding: 1em;
+  margin: 0px;
+}
+
+.aboutimage {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  object-fit: cover;
+}
+.aboutinfo {
+  font-size: 1.3vw;
+}
+#home-btn a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(32, 29, 29);
+}
+
+/* ––
+*    Title: Humburger Menu
+*    Author: Deltaty-Code
+*    Date: 29 Dec 2020
+*    Code version: <code version>
+*    Availability: https://github.com/Deltaty-Code/Humburger-Menu
+Changes: General styling and color changes to fit the theme of my website
+ */
+
+nav {
+  background: white;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+  font-size: 1.5rem;
+}
+/* */
+.logo a {
+  text-decoration: none;
+  color: red;
+}
+/* */
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+}
+nav .mainMenu li a:hover {
+  background: rgb(223, 217, 217);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgba(14, 3, 2, 0.418);
+    font-size: 1.6rem;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+
+/* ––
+*    Title: How TO - Hero Image
+*    Author: w3schools
+*    Date: 
+*    Code version: 
+*    Availability: https://www.w3schools.com/howto/howto_css_hero_image.asp
+Changes: colors and fonts have been changed to suit my website, as well as positioning of background image
+ */
+.hero-image {
+  position: relative;
+  height: 650px;
+  background-image: url(../images/weightlift.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  font-family: "Montserrat", sans-serif;
+
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: rgb(224, 134, 134);
+  color: white;
+}
+
+/* image carousel*/
+/**    Title: HOW TO - Slideshow
+*    Author: w3schools
+*    Date: 
+*    Code version: <code version>
+*    Availability: https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+Usages: Create a slideshow of images
+*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.captiontext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pricing table*/
+/* ––
+*    Title: Pricing table
+*    Author: DarkCode
+*    Date: 7 May 2020
+*    Code version: 
+*    Availability: https://www.youtube.com/watch?v=SWyuQMCTxCQ
+Changes: Adjusted the colors of the text and animation to suit the theme of my website
+ */
+
+.pricing-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: min(1600px, 100%);
+  margin: auto;
+}
+
+.pricing-card {
+  flex: 1;
+  max-width: 360px;
+  background-color: #fff;
+  margin: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #2d2d2d;
+  transition: 0.3s linear;
+}
+
+.pricing-card-header {
+  background-color: #d44e19;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.4s linear;
+}
+
+.pricing-card:hover .pricing-card-header {
+  box-shadow: 0 0 0 26em #d44e19;
+}
+
+.price {
+  font-size: 70px;
+  color: #d44e19;
+  margin: 40px 0;
+  transition: 0.2s linear;
+}
+
+.price sup,
+.price span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pricing-card:hover,
+.pricing-card:hover .price {
+  color: #fff;
+}
+
+.pricing-card li {
+  font-size: 16px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.order-btn {
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  border: 2px solid #d44e19;
+  color: #d44e19;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s linear;
+}
+
+.order-btn:hover {
+  background-color: #d44e19;
+  color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  .pricing-card {
+    flex: 50%;
+  }
+}
+
+/* contact us page styling, my own work*/
+.container3 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: 0px;
+}
+.container3 > div {
+  background: #eee;
+  padding: 1em;
+  margin: 0px;
+}
+.container3 .contactinfo {
+  font-size: 1.6vw;
+  position: relative;
+  flex-direction: column;
+}
+.container3 .text {
+  padding: 10px;
+}
+.box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.openingHours {
+  position: relative;
+  padding: 20px 0;
+  font-size: 1.6vw;
+}
+
+/* register form */
+/*/* ––
+*    Title: Lab 6 Sample solution
+*    Author: City, University of London
+*    Date: 2021
+*    Code version: 
+*    Availability: https://moodle.city.ac.uk/mod/folder/view.php?id=1824172
+
+Usages: 
+-To style the registration and login forms, as well as the booking form
+-To add client-side form validation using javascript
+
+Changes: 
+-added a container with 50% 50% column split to make them appear next to each other
+-Changed colors and positioning to fit the theme of my website
+ */
+.container4 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 5px;
+  padding: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+fieldset {
+  border: 0;
+}
+.gender,
+#tactick {
+  width: 100%;
+  display: inline;
+  position: relative;
+  padding: 0 15px 0 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  background-color: rgb(236, 232, 207);
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn,
+.loginbtn {
+  background-color: rgb(230, 38, 4);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover,
+loginbtn:hover {
+  opacity: 1;
+}
+
+.input-type-1 small {
+  position: relative;
+  /* freely control positioning of error message */
+  bottom: 0;
+  left: 1;
+  color: #f31010;
+  /* to show it is an error, set color to red */
+  display: none;
+  /* do not display message until JS says so */
+  font-weight: bold;
+  padding: 1px;
+}
